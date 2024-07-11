@@ -3,7 +3,11 @@ const mapProd = require('./mapearProdutos');
 
 
 const server = http.createServer(function(req,res){
- res.end(mapProd());
+ if (req.url === '/produtos') {
+  res.end(mapProd());
+} else {
+  res.end("Tela inicial");
+}
 })
 
 
