@@ -1,27 +1,16 @@
-const todos = () => {
-  let listaProdutos = [
+const produtos = [
     {
-      nome:'Caneta',
+      nome:"Caneta",
       preco: 13.00,
     },
     {
-      nome:'Caderno',
+      nome:"Caderno",
       preco: 30.00,
     },
     {
-      nome:'Lapis',
+      nome:"Lapis",
       preco: 2.99,
     },
-    {
-      nome:'Borracha',
-      preco: 3.99,
-      },
-    {
-      nome:'Apontador',
-      preco: 1.99,
-    },
-   ];
-   return listaProdutos
-}
+   ]
 
-module.exports = todos
+module.exports = produtos

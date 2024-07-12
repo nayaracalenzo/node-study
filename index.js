@@ -1,12 +1,17 @@
 const http = require('http'); 
-const mapProd = require('./mapearProdutos'); 
-
+const usuarios = require('./usuarios')
+const pedidos = require('./pedidos');
+const produtos = require('./produtos');
 
 const server = http.createServer(function(req,res){
  if (req.url === '/produtos') {
-  res.end(mapProd());
-} else {
-  res.end("Tela inicial");
+  res.end(produtos);
+} else if(req.url === '/usuarios') {
+  res.end(usuarios);
+} else if (req.url === '/pedidos') {
+  res.end(pedidos);
+ } else { 
+  res.end("page not found: erro 404");
 }
 })
 
